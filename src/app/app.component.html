@@ -1,0 +1,64 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+    main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:30px;
+   background-color: lavender;
+  }
+  main a{
+    text-decoration: none;
+  }
+  .show{
+    display: none;
+  }
+  .show.active{
+    display: block;
+  }
+</style>
+
+<main class="main">
+  <div>
+    <h1 (click)="toggleExpand(0)">Информация за вас</h1>
+  <div *ngIf = "this.sectionStates[0]">
+    <p>Име: Жоро Димитров</p>
+    <p>Години: 20</p>
+    <p>Държава: България</p>
+  </div>
+  <h1 (click)="toggleExpand(1)">Хобита и интереси</h1>
+  <div *ngIf = "this.sectionStates[1]">
+    <p>Програмиране</p>
+    <p>Тренировки</p>
+    <p>Коли</p>
+  </div>
+  <h1 (click)="toggleExpand(2)">Link към канал на любим Content Creator</h1>
+  <div  *ngIf = "this.sectionStates[2]">
+    <a href="https://www.youtube.com/@speedacademy">Speed Academy</a>
+  </div>
+  <h1 (click)="toggleExpand(3)">Информация за моя канал</h1> 
+  <div *ngIf = "this.sectionStates[3]">
+    <p>Канала е създаден за развлечение</p>
+  </div>
+</div>
+
+</main>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<router-outlet />

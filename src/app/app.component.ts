@@ -11,7 +11,6 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'first-hw';
-  isExpanded = false;
   sectionStates: boolean[] = [false,false,false,false];
 
   toggleExpand(index: number) {

@@ -10,7 +10,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'first-hw';
   sectionStates: boolean[] = [false,false,false,false];
 
   toggleExpand(index: number) {
